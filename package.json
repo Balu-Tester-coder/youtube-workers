@@ -1,0 +1,29 @@
+{
+  "name": "yt-browser-workers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "deploy-1": "wrangler deploy --config browser-workers1/wrangler.toml",
+  "deploy-2": "wrangler deploy --config browser-workers2/wrangler.toml",
+  "deploy-3": "wrangler deploy --config browser-workers3/wrangler.toml",
+  "deploy-4": "wrangler deploy --config browser-workers4/wrangler.toml",
+  "deploy-5": "wrangler deploy --config browser-workers5/wrangler.toml",
+  "deploy-6": "wrangler deploy --config browser-workers6/wrangler.toml",
+  "deploy-7": "wrangler deploy --config browser-workers7/wrangler.toml",
+  "deploy-8": "wrangler deploy --config browser-workers8/wrangler.toml",
+  "deploy-9": "wrangler deploy --config browser-workers9/wrangler.toml",
+  "deploy-10": "wrangler deploy --config browser-workers10/wrangler.toml",
+  "deploy-11": "wrangler deploy --config browser-workers11/wrangler.toml",
+  "deploy-all": "npm run deploy-1 && npm run deploy-2 && npm run deploy-3 && npm run deploy-4 && npm run deploy-5 && npm run deploy-6 && npm run deploy-7 && npm run deploy-8 && npm run deploy-9 && npm run deploy-10 && npm run deploy-11"
+}
+
+
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "wrangler": "^4.12.0"
+  }
+}

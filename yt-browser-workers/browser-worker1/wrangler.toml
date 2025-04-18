@@ -1,0 +1,19 @@
+name = "browser-worker1"
+main = "src/index.js"
+compatibility_date = "2025-03-03"
+workers_dev = true
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[browser]
+binding = "MYBROWSER"
+
+[[durable_objects.bindings]]
+name = "PUPPETEER_SESSIONS1"
+class_name = "PuppeteerSession1"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["PuppeteerSession1"]

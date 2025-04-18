@@ -1,0 +1,28 @@
+name: Deploy All Workers
+
+on:
+  schedule:
+    - cron: '0 9,21 * * *'  # Runs at 9 AM and 9 PM UTC daily
+  workflow_dispatch:         # Manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Deploy all workers
+      run: npm run deploy-all
+
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
